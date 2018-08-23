@@ -1,0 +1,55 @@
+.home-banner{
+    /*background-image: url('./asset/images/home.jpg');*/
+    background-repeat: repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+  overflow-x: hidden;
+}
+footer{
+background-color: rgb(32, 30, 30);
+color: rgb(224, 211, 211);
+margin-top: 10px;
+
+}
+#copy{
+    text-align: center;
+    padding: 2em 2em 2em 2em;
+}
+#welcome{
+    text-align: center;
+}
+.info{
+   display: inline-block;
+  
+   color:rgb(128, 118, 118);
+  
+}
+.app {
+    float: left;
+    margin-left: 5%;
+}
+.flex-column{
+    margin-left: 20px;
+}
+#title{
+    text-align: center;
+}
+#num{
+   background-origin: padding-box;
+   border-width: 1px;
+   position: absolute;
+   border-radius:150%;
+   font-size: 3em;
+   color: white;
+   border: 1px solid rgb(231, 227, 227);
+   background-color:rgb(2, 85, 2);
+   -webkit-border-radius:150%;
+   -moz-border-radius:150%;
+   -ms-border-radius:150%;
+   -o-border-radius:150%;
+}
+.members{
+    margin-left: 20px;
+}

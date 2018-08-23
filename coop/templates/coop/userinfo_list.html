@@ -1,0 +1,56 @@
+{% extends "generic.html" %}
+{%block content%}
+<div class="container">
+    <div class="col-sm-32">
+        <style>
+           
+            .user{
+                list-style: none;
+                float:left;
+            }
+        </style>
+        <h4 style="text-align: center">Members Record</h4>
+        {% if userinfo_list%}
+        {%for userinfo in userinfo_list%}
+        <div class="table-responsive">
+       <table class="table table-hover">
+           <thead>
+               <tr>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Phone</th>
+                   <th>Address</th>
+                   <th>Office Address</th>
+                   <th>State of Origin</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>{{userinfo.first_name}}-{{userinfo.last_name}}</td>
+                   <td>{{userinfo.email}}</td>
+                   <td>{{userinfo.phone_no}}</td>
+                   <td> {{userinfo.home_address}},{{userinfo.town}}.{{userinfo.state_re}}</td>
+                   <td>{{userinfo.office_address}}</td>
+                   <td>{{userinfo.state_origin}}</td>
+               </tr>
+           </tbody>
+       </table>
+    </div>
+       <!--   <ul class="user">
+              <li id="user">Name: {{userinfo.first_name}}-{{userinfo.last_name}}</li>
+              <li id="user">Email: {{userinfo.email}}</li>
+              <li id="user">Phone: {{userinfo.phone_no}}</li>
+              <li id="user">Address: {{userinfo.home_address}},{{userinfo.town}}.{{userinfo.state_re}}</li>
+              <li id="user">Office Address: {{userinfo.office_address}}</li>
+              <li id="user">State of Origin: {{userinfo.state_origin}}</li>
+          </ul>-->
+            
+             
+          
+        {% endfor %}
+        {% else %}
+        <h1 style="color:red">No record found!</h1>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

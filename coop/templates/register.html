@@ -1,0 +1,84 @@
+{%extends "generic.html"%}
+{%block content%}
+
+            <form action="{%url 'save'%}" method="post" class="form-horizontal" name="myForm">
+            {%csrf_token%}
+            <!--Passport upload area-->
+           <!-- <div style="float:right;">
+            <canvas id="canvas" width=200 height=200 ></canvas>
+            <button id="capture" class="btn-primary">Capture</button> 
+            </div>-->
+       <div class="form-group-sm col-sm-7">
+              <label for ="{{formz.first_name.id_for_label}}">First Name</label>
+              <input type="text" name="first_name" maxlength="20" required id="id_first_name"class="form-control" />
+        </div> 
+     
+        <div class="form-group-sm col-sm-7">
+                <label for ="{{formz.last_name.id_for_label}}">Last Name</label>
+                <input type="text" name="last_name" maxlength="20" required id="id_last_name" class="form-control"/>
+          </div>  
+          <div class="form-group-sm col-sm-7">                
+              <label for ="{{formz.gender.id_for_label}}">Gender</label>
+            <div class="form-control" >{{formz.gender}}</div>
+          </div>  
+          <div class="form-group-sm col-sm-7">  
+                            <label for ="{{formz.date_birth.id_for_label}}">Date of Birth</label>
+                <input type="date" name="date_birth" maxlength="20" required id="id_date_birth" class="form-control"/>
+          </div>  
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.state_origin.id_for_label}}">State of Origin</label>
+                <div class="form-control">{{formz.state_origin}}</div>
+          </div> 
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.local_govt.id_for_label}}">Local Govt</label>
+                <input type="text" name="local_govt" maxlength="20" required id="id_local_govt" class="form-control"/>
+          </div>  
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.nationalty.id_for_label}}">Nationalty</label>
+                <input type="text" name="nationalty" maxlength="20" required id="id_nationalty" class="form-control"/>
+          </div> 
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.phone_no.id_for_label}}">Mobile Number</label>
+                <input type="text" name="phone_no"  maxlength="20" required id="id_phone_no" class="form-control"/>
+          </div>
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.email_for_label}}">Email</label>
+                <input type="email" name="email"  maxlength="20" required id="id_email" class="form-control"/>
+          </div>
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.home_address_for_label}}">Home Address</label>
+                <input type="text" name="home_address"  maxlength="20" required id="id_home_address" class="form-control"/>
+          </div>
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.office_address_for_label}}">Office Address</label>
+                <input type="text" name="office_address"  maxlength="20" required id="id_office_address" class="form-control"/>
+          </div>
+          <div class="form-group-sm col-sm-7">
+                              <label for ="{{formz.town_for_label}}">Town</label>
+                <input type="text" name="town"  maxlength="20" required id="id_town" class="form-control"/>
+          </div>
+          <div class="form-group-sm col-sm-7 ">
+                  
+            <label for ="{{formz.first_name.id_for_label}}" >Passport</label>
+            <input type="file" name="first_name" maxlength="20" required id="id_first_name "
+            accept="image/*"/>
+           <!-- <video id="player" controls autoplay></video>-->
+            
+      </div> 
+          <div class="form-group-sm col-sm-7">
+                  <input type="submit" class="btn-success" value="submit" onclick="save()"/>
+
+</div>
+        </form>
+  
+<!--</div>
+<form action="{%url 'save'%}" method="post" class="form-horizontal">
+        {%csrf_token%}
+<table>
+    {{formz}}
+    
+</table>
+    <input type="submit" class="btn-success" value="submit"/>
+-->
+
+{%endblock%}

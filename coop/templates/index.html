@@ -1,0 +1,71 @@
+{% extends "generic.html"%}
+{% block content %}
+<div class="col-sm-32 home-banner">
+    <h4 id="welcome">Welcome to Takwa CICS web application..<b>This site is under construction, feel free to tesst<br>
+    <p><b>some unctions might not be available. The test period is 7am-5:00pm</b></p></b></h4>
+    <div class="row d-flex flex-column">
+      {%load static%}
+      <a href="/record" >  <div class="app thumbnail col-sm" >
+      <h4 id="title ">Members</h4>
+
+      <h4 id="num">{{num_member}}</h4> 
+
+ <img src="{%static 'coop/members.png' %}" alt="members logo" />
+  </div></a> 
+ <a href="{%url 'register'%}"><div class="app col-sm thumbnail" >
+      <h4 id="title ">Add Members</h4>
+    <img src="{%static 'coop/add.png' %}" alt="add logo" />
+    </div></a> 
+  <div class="app col-sm thumbnail" >
+      <h4 id="title ">Loans</h4>
+    <img src="{%static 'coop/loan.png' %}" alt="loan logo" />
+     </div>
+  <div class="app col-sm thumbnail" >
+      <h4 id="title">Account</h4>
+    <img src="{%static 'coop/account.png' %}" alt="account logo" />
+     </div>
+
+
+  </div>
+  <div class="row members">
+     
+       <div class="app col-sm thumbnail">
+          <h4 id="title ">Female</h4>
+      <h4 id="num">{{num_female}}</h4>
+      <img src="{% static 'coop/female.png'%}" height=30 width=100/>
+       </div>
+       <div class="app col-sm thumbnail">
+          <h4 id="title ">Male</h4>
+          <h4 id="num"> {{num_male}}</h4>
+        <img src="{% static 'coop/male.png'%}" height=30 width=100/>
+       </div>
+  <!-- <p>{{Data}}</p>-->
+</div>
+{%for data in data_set%}
+<div class="table">
+<!--<table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Office Address</th>
+        <th>State of Origin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>{{data.first_name}},{{datao.last_name}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.phone_no}}</td>
+          <td> {{data.home_address}},{{data.town}}.{{data.state_re}}</td>
+          <td>{{data.office_address}}</td>
+          <td>{{data.state_origin}}</td>
+      </tr>
+    </tbody>
+</table>-->
+</div>
+{% endfor %}
+</div>
+{% endblock %}
