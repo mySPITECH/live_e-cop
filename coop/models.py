@@ -35,7 +35,7 @@ class UserInfo(models.Model):
     office_address = models.CharField(max_length=20)
     state = models.CharField(choices=STATE,max_length=10)
     town = models.CharField(max_length=10, null=False)
-    passport=models.ImageField(null=True)
+    #passport=models.ImageField(null=True)
     
 
      
