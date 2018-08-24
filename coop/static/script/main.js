@@ -1,8 +1,8 @@
 function save(){
   
-    alert("Member Added Successfuly");
+ window.alert("Member Added Successfuly");
     
-}
+} 
     
 return false;
 /*
