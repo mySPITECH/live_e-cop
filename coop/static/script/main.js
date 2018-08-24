@@ -4,7 +4,6 @@ function save(){
     
 } 
     
-return false;
 /*
 const canvas= document.getElementById('canvas');
 const captureButton = document.getElementById('capture');
