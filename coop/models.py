@@ -39,7 +39,7 @@ class UserInfo(models.Model):
     office_address = models.CharField(max_length=20)
     state = models.CharField(choices=STATE,max_length=10)
     town = models.CharField(max_length=10, null=False)
-    passport=models.ImageField(null=True,upload_to='uploads')
+   # passport=models.ImageField(null=True,upload_to='uploads')
     balance = models.DecimalField(decimal_places=2,blank=True,
     default=0.00,max_digits=12)
 
