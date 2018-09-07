@@ -18,12 +18,14 @@ from django.urls import path,include
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
-from coop.views import record
+from coop.views import record,pay_info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('coop/',include('coop.urls')),
     path('', RedirectView.as_view(url='/coop/')),
- path ('record/',record)
+ path ('record/',record),
+ path('payment-details',pay_info),
+ path('accounts/', include('django.contrib.auth.urls')),
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
