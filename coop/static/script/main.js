@@ -1,9 +1,10 @@
 function save(){
   
- window.alert("Member Added Successfuly");
+    alert("Member Added Successfuly");
     
-} 
+}
     
+return false;
 /*
 const canvas= document.getElementById('canvas');
 const captureButton = document.getElementById('capture');

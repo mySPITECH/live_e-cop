@@ -1,0 +1,38 @@
+{%extends "generic.html"%}
+{%block content%}
+<div class="container">
+   
+    <form action="{%url 'pay'%}" method="POST"> 
+          {%csrf_token%}
+       <div class="form-group-sm col-sm-7">
+               <label for ="{{payment_form.id_account_number_for_label}}">Account Number</label>
+               <input type="text" name="account_number" maxlength="20"  id="id_account_owner"class="form-control" />
+         </div> 
+        
+         <div class="form-group-sm col-sm-7">
+            <label for ="{{payment_form.account_name_for_label}}">Account Name</label>
+            <input type="text" name="account_name" maxlength="20"  id="account_name"class="form-control" />
+      </div> 
+         <div class="form-group-sm col-sm-7">
+            <label for ="{payment_form.id_txn_type_for_label}}">TXN Type:</label>
+          <div class="form-control" >{{payment_form.txn_type}}</div>
+      </div> 
+      <div class="form-group-sm col-sm-7">
+        <label for ="{{payment_form.id_amount_for_label}}">Amount</label>
+        <input type="number" name="amount" maxlength="20"  id="id_amount"class="form-control" />
+  </div> 
+  <div class="form-group-sm col-sm-7">
+    <label for ="{{payment_form.id_txn_details_for_label}}">TXN Details </label>
+    <input type="text" name="txn_details" maxlength="20"  id="id_txn_details"class="form-control" />
+</div> 
+<!-- {{payment_form}}-->
+ <input type="submit"class="btn btn-success" value="Pay">
+  <input type="reset" class="btn btn-danger" value="undo">
+    </form>
+    <b style="color:red;">{{message}}</b>
+    <ul>
+    <li style= "color:green;">{{messages}}</li>
+  </ul>
+<a href="/payment-details">Click here to Check Payment</a>
+</div>
+{%endblock%}
