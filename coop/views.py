@@ -68,7 +68,7 @@ def validate(request):
     if user in  d:
         return render(request,'register.html',{'formz':formz,'error':error})
     else:
-        return render(request,'success.html',{'valuez':valuez,'formz':formz})
+        return render(request,'success.html',{'valuez':valuez,'formz':formz,'user':user})
 
 
         
